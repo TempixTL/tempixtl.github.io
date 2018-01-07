@@ -4,7 +4,7 @@ Section: Tweaks
 Maintainer: Thomas Lauerman
 Depends: mobilesubstrate
 Architecture: iphoneos-arm
-Filename: debs/com.tempixtl.lockscreenlife_1.0_iphoneos-arm.deb
+Filename: debs//com.tempixtl.lockscreenlife_1.0_iphoneos-arm.deb
 Size: 10686
 Installed-Size: 120
 MD5sum: aa6d47a94c7ebab4c8ffcc762dd95eff
