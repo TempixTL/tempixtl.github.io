@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Clich&eacute Locator - Thomas Lauerman</title>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Latest FontAwesome CSS -->
+		<script src="https://use.fontawesome.com/38fc4fe569.js"></script>
+
+		<!-- Latest compiled and minified JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- Personal formatting, style, and javascript -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="loadHeaderAndFooter.js"></script>
+		<script src="cliche-locator.js"></script>
+        
+        <style>
+            textarea {
+                padding: 10px;
+                width: 100%;
+                resize: none;
+            }
+            
+            .text {
+                font-family: monospace;
+            }
+            
+            .cliche {
+                color: red;
+                font-style: oblique;
+            }
+        </style>
+        
+	</head>
+	
+	<body>
+		<div id="header"></div>
+		
+        <div class="container">
+            <div class="col-lg-12">
+                <h1><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Clich&eacute; Locator <small>Find clich&eacute;s and avoid vague, unoriginal writing</small></h1>
+                <hr>
+            </div>
+            
+            <div id="inputArea" class="col-lg-10 col-lg-offset-1 cols-xs-12">
+                <p>Paste your essay into the box below:</p>
+                <textarea id="essayInput" class="text" rows="25" cols="50" autofocus placeholder="Lorem ipsum dolor sit amet..."></textarea>
+                <br>
+                <button class="btn btn-primary btn-lg" onclick="submitButtonPressed()">Analyze!</button>
+                <button class="btn btn-default btn-sm" onclick="insertSampleEssay()">Show an example essay</button>
+            </div>
+            
+            <div id="about" class="col-lg-10 col-lg-offset-1 col-xs-12">
+                <hr>
+                <h3>About the Clich&eacute; Locator</h3>
+                <h4>Inspiration</h4>
+                <p>I was inspired to create Clich&eacute; Locator during a class I took called "Creative Genius," during my freshman year at Trinity University. Much to my dismay, the site <a href="http://cliche.theinfo.org/">Cliche Finder</a> already existed, but that didn't stop me from reinventing the wheel. Much of Clich&eacute; Locator's functionality is modeled after Cliche Finder.</p>
+                <h4>What specific clich&eacute;s do I look for?</h4>
+                <p>My list of clich&eacute;s is compiled from the following sources:</p>
+                <ul>
+                    <li><a href="http://cliche.theinfo.org/cliches">Cliche Finder</a> (originally from <em>Associated Press Guide to News Writing</em>, Rene J. Cappon.)</li>
+                    <li><a href="http://www.be-a-better-writer.com/cliches.html">Be a Better Writer.com</a></li>
+                </ul>
+                <p>See the full database of clich&eacute;s this website uses <a href="cliches.txt">here</a>.</p>
+            </div>
+        </div>
+        
+        <div id="footer"></div>
+	</body>
+</html>
