@@ -1,29 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>Clich&eacute Locator - Thomas Lauerman</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<!-- FontAwesome CSS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+		<title>Clich&eacute Locator</title>
+
+		<!-- JQuery (needed to load navbar) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script> $(function(){ $("#navbar-placeholder").load("navbar.html"); }); </script>
 		
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
-		<!-- Latest FontAwesome CSS -->
-		<script src="https://use.fontawesome.com/38fc4fe569.js"></script>
-
-		<!-- Latest compiled and minified JQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-		<!-- Personal formatting, style, and javascript -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
-		<script src="loadHeaderAndFooter.js"></script>
+		<!-- Custom JS and Style -->
 		<script src="cliche-locator.js"></script>
-        
-        <style>
+		<style>
             textarea {
                 padding: 10px;
                 width: 100%;
@@ -39,15 +35,13 @@
                 font-style: oblique;
             }
         </style>
-        
 	</head>
 	
 	<body>
-		<div id="header"></div>
-		
+		<div id="navbar-placeholder"></div>
         <div class="container">
             <div class="col-lg-12">
-                <h1><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Clich&eacute; Locator <small>Find clich&eacute;s and avoid vague, unoriginal writing</small></h1>
+                <h1>Clich&eacute; Locator <small>Find clich&eacute;s and avoid vague, unoriginal writing</small></h1>
                 <hr>
             </div>
             
@@ -74,6 +68,8 @@
             </div>
         </div>
         
-        <div id="footer"></div>
+        <!-- Bootstrap Javascript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	</body>
 </html>
