@@ -1,8 +1,0 @@
-Origin: Tempix's Tweak Repository
-Label: Tempix's Repo
-Suite: stable
-Version: 1.0
-Codename: trousers
-Architectures: iphoneos-arm
-Components: main
-Description: Public repo for tweaks by Tempix
