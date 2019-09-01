@@ -26,7 +26,7 @@ function TabView() {
         </div>
       </div>
       <div className="row justify-content-center">
-        <div className="col-8">
+        <div className="col-md-8 col-sm-10 col-xs-12">
           {(() => {
             switch (tab) {
               case "about": return <About />;

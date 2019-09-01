@@ -1,5 +1,4 @@
 import React from 'react';
-import { animated, useSpring } from 'react-spring';
 // Assets
 import headshot from 'assets/headshot.jpg';
 
@@ -9,8 +8,8 @@ function About() {
       <img
         src={headshot}
         alt="Headshot"
-        className="rounded"
-        style={{ width: "200px", height: "200px" }} />
+        className="shadow rounded float-left"
+        style={{ width: "200px", height: "200px", margin: "10px" }} />
       <p>Testing</p>
     </div>
   );
