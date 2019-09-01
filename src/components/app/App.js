@@ -17,31 +17,28 @@ function App() {
 
   return (
     <div>
-      <div className="container header">
+      <div className="container" style={{padding: "20px 0"}}>
         <div className="row">
-          <div className="col signature">
+          <div className="col text-center" style={{width: "200px", height: "200px"}}>
             <FlareComponent
-              className="signature"
               width={200} height={200}
               animationName="stroke"
               file={signature} />
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col text-center">
             <CSSTransition in={showName} timeout={2000} classNames="name">
               <h2 className="name">Thomas Lauerman</h2>
             </CSSTransition>
           </div>
         </div>
       </div>
-      <div className="container nav">
-        <Nav variant="pills">
-          <Nav.Item defaultActiveKey="about">
-            <Nav.Link eventKey="about">about</Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </div>
+      <Nav variant="pills" defaultActiveKey="about" className="justify-content-center">
+        <Nav.Link eventKey="about">about</Nav.Link>
+        <Nav.Link eventKey="projects">projects</Nav.Link>
+        <Nav.Link eventKey="links">links</Nav.Link>
+      </Nav>
     </div>
   );
 }
