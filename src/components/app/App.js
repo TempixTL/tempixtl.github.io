@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 // Components
 import { Nav } from 'react-bootstrap';
-import FlareComponent from 'flare-react';
+import Signature from 'components/signature/Signature';
 import { CSSTransition } from 'react-transition-group';
 // Styles
 import './App.css';
-// Assets
-import signature from 'assets/signature.flr';
 
 function App() {
   const [tab, setTab] = useState("about");
@@ -14,17 +12,12 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col text-center" style={{ width: "200px", height: "200px" }}>
-          {/* TODO repeat animation on click */}
-          <FlareComponent
-            width={200} height={200}
-            animationName="stroke"
-            file={signature} />
+        <div className="col text-center" style={{height: "200px"}}>
+          <Signature width={200} height={200}/>
         </div>
       </div>
       <div className="row">
         <div className="col text-center">
-          {/* TODO hide text on initial page load */}
           <CSSTransition in={true} appear={true} timeout={2000} classNames="name">
             <h2 className="name">Thomas Lauerman</h2>
           </CSSTransition>
