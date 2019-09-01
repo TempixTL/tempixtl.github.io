@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // Components
 import { Nav } from 'react-bootstrap';
 import About from 'components/about/About';
+import Construction from 'components/construction/Construction';
 
 function TabView() {
   // Tracks selected tab
@@ -30,7 +31,7 @@ function TabView() {
           {(() => {
             switch (tab) {
               case "about": return <About />;
-              default: return <p>{tab}</p>;
+              default: return <Construction/>;
             }
           })()}
         </div>
