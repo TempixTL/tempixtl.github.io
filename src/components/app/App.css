@@ -1,10 +1,10 @@
 /* Used for animations only, Bootstrap does the rest */
 
-.name-enter {
+.name-appear {
   opacity: 0;
 }
 
-.name-enter-active {
+.name-appear-active {
   opacity: 1;
   transition: opacity 2s;
 }
