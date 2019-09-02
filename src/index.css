@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* For some reason * { margin: 0; } doesn't work */
 h1,h2,h3,h4,h5,h6,p,ul {
   margin: 0;
 }
@@ -14,4 +15,9 @@ h1,h2,h3,h4,h5,h6,p,ul {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* FontAwesome list icons look offset */
+.fa-li {
+  top: 3px
 }

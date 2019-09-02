@@ -12,10 +12,9 @@ function TabView() {
   return (
     <div>
       <Nav
-        style={{ paddingTop: "20px" }}
         variant="pills"
         defaultActiveKey={tab}
-        className="justify-content-center"
+        className="pt-3 justify-content-center"
         onSelect={(eventKey, _) => setTab(eventKey)}>
         <Nav.Link eventKey="about">about</Nav.Link>
         <Nav.Link eventKey="projects">projects</Nav.Link>
