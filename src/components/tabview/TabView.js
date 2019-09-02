@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // Components
 import { Nav } from 'react-bootstrap';
 import About from 'components/about/About';
+import Resume from 'components/resume/Resume';
 import Construction from 'components/construction/Construction';
 
 function TabView() {
@@ -26,16 +27,13 @@ function TabView() {
           <hr />
         </div>
       </div>
-      <div className="row justify-content-center">
-        <div className="col-md-8 col-sm-10 col-xs-12">
-          {(() => {
-            switch (tab) {
-              case "about": return <About />;
-              default: return <Construction/>;
-            }
-          })()}
-        </div>
-      </div>
+      {(() => {
+        switch (tab) {
+          case "about": return <About />;
+          case "resume": return <Resume />;
+          default: return <Construction />;
+        }
+      })()}
     </div>
   );
 }
