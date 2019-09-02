@@ -18,19 +18,19 @@ function About() {
         <div className="col-sm-6 py-2">
             <ul className="fa-ul">
               <li>
-            <FontAwesomeIcon icon={faMapMarkerAlt} listItem/> 
+                <FontAwesomeIcon icon={faMapMarkerAlt} listItem/> 
                 Dallas/Fort Worth &amp; San Antonio
               </li>
               <li>
-            <FontAwesomeIcon icon={faBriefcase} listItem/> 
+                <FontAwesomeIcon icon={faBriefcase} listItem/> 
                 ACM Computer Science Tutor
               </li>
               <li>
-            <FontAwesomeIcon icon={faUniversity} listItem/> 
+                <FontAwesomeIcon icon={faUniversity} listItem/> 
                 Trinity University Class of 2021
               </li>
               <li>
-            <FontAwesomeIcon icon={faGraduationCap} listItem/> 
+                <FontAwesomeIcon icon={faGraduationCap} listItem/> 
                 Computer Science Major &amp; Art Minor
               </li>
             </ul>
