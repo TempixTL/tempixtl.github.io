@@ -14,7 +14,7 @@ function Resume() {
   return (
     <div className="row justify-content-center">
       <div className="col-10 text-center">
-        <div className="rounded shadow d-inline-block">
+        <div className="rounded shadow d-inline-block p-2">
           <Document file={resume}>
             <Page pageNumber={1} />
           </Document>

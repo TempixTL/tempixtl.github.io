@@ -19,7 +19,6 @@ function TabView() {
         <Nav.Link eventKey="about">about</Nav.Link>
         <Nav.Link eventKey="projects">projects</Nav.Link>
         <Nav.Link eventKey="resume">resume</Nav.Link>
-        <Nav.Link eventKey="links">links</Nav.Link>
       </Nav>
       <div className="row justify-content-center">
         <div className="col-10">

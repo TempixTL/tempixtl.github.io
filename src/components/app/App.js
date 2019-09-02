@@ -3,6 +3,7 @@ import { useSpring, animated } from 'react-spring';
 // Components
 import Signature from 'components/signature/Signature';
 import TabView from 'components/tabview/TabView';
+import Footer from 'components/footer/Footer';
 
 function App() {
   // Animates name fade-in
@@ -21,6 +22,7 @@ function App() {
         </div>
       </div>
       <TabView/>
+      <Footer/>
     </div>
   );
 }
