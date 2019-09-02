@@ -13,14 +13,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function Resume() {
   return (
     <div className="row justify-content-center">
-      <div className="col-sm-10 text-center">
+      <div className="col-10 text-center">
         <div className="rounded shadow d-inline-block">
           <Document file={resume}>
             <Page pageNumber={1} />
           </Document>
         </div>
         <br/>
-        <Button className="m-5" href={resume} target="_blank">
+        <Button className="m-3" href={resume} target="_blank">
           <FontAwesomeIcon icon={faFileDownload}/> Download
         </Button>
       </div>
