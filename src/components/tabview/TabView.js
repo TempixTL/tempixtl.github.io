@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
 import About from 'components/about/About';
 import Resume from 'components/resume/Resume';
+import Projects from 'components/projects/Projects';
 import Construction from 'components/construction/Construction';
 
 function TabView() {
@@ -29,6 +30,7 @@ function TabView() {
         switch (tab) {
           case "about": return <About />;
           case "resume": return <Resume />;
+          case "projects": return <Projects />;
           default: return <Construction />;
         }
       })()}

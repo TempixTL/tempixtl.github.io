@@ -15,7 +15,7 @@ function Resume() {
           <embed src={resumePath} type="application/pdf" className="embed-responsive-item"/>
         </div>
         <br/>
-        <Button className="m-3" href={resumePath} target="_blank">
+        <Button className="m-3" href={resumePath}>
           <FontAwesomeIcon icon={faFileDownload}/> Download
         </Button>
       </div>
