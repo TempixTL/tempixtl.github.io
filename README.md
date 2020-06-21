@@ -1,9 +1,22 @@
-# tempixtl.github.io
+# [lauerman.dev](https://lauerman.dev)
 
-### Visit the site at [lauerman.dev 🔗](https://lauerman.dev)!
+lauerman.dev is my personal website where I showcase things like personal projects, work experience and my professional resume.
 
-Welcome to the development repository of my personal website! 😁
+![GitHub last commit](https://img.shields.io/github/last-commit/tempixtl/lauerman.dev)
+![David](https://img.shields.io/david/tempixtl/lauerman.dev)
+![GitHub](https://img.shields.io/github/license/tempixtl/lauerman.dev)
 
-The `dev` branch is used for all development, and the built site is deployed to the `master` branch.
+## About
 
-This website was build with [React](https://reactjs.org), [Bootstrap](https://getbootstrap.com) and a little bit of [Flare Animation](https://www.2dimensions.com/about-flare).
+lauerman.dev was built using...
+
+- [React](https://reactjs.org)
+- [Bootstrap](https://getbootstrap.com) 
+- a little bit of [Flare Animation](https://www.2dimensions.com/about-flare)
+
+## Branches
+
+|branch|use|
+|-|-|
+|[dev](https://github.com/TempixTL/lauerman.dev/tree/dev)|development|
+|[master](https://github.com/TempixTL/lauerman.dev/tree/master)|publishing static site|
