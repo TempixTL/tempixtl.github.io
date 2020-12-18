@@ -9,17 +9,22 @@ title: lauerman.dev
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/css/reset.css"/>
+    <link rel="stylesheet" href="/css/base.css"/>
     <link rel="stylesheet" href="/css/styles.css"/>
   </head>
 
   <body>
     <nav>
-      <a href="/">
-        <img src="/img/logo.svg" style="width: 48px; height: 48px">
+      <a href="/" style="display: inline-block; width: 48px; height: 48px">
+        <img src="/img/logo.svg">
       </a>
-      <a href="/experience">experience</a>
-      <a href="/resume">resume</a>
+      <a href="/experience" class="green-accent">experience</a>
+      <a href="/resume" class="pink-accent">resume</a>
     </nav>
-    {{ content | safe }}
+    <div class="content">
+      {{ content | safe }}
+    </div>
   </body>
 </html>
