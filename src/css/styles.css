@@ -1,5 +1,14 @@
 /* Simple CSS inspired by bettermotherfuckingwebsite.com */
 
+@font-face {
+  font-family: "Quicksand";
+  src: url(/css/fonts/Quicksand.ttf);
+}
+
+:root {
+  font-family: "Quicksand";
+}
+
 body {
   margin: 40px auto;
   max-width: 650px;
