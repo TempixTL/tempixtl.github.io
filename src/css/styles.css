@@ -1,5 +1,3 @@
-/* Simple CSS inspired by bettermotherfuckingwebsite.com */
-
 @font-face {
   font-family: "Quicksand";
   src: url(/css/fonts/Quicksand.ttf);
@@ -8,6 +6,8 @@
 :root {
   font-family: "Quicksand";
 }
+
+/* Simple CSS inspired by bettermotherfuckingwebsite.com */
 
 body {
   margin: 40px auto;
