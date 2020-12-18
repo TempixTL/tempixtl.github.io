@@ -3,9 +3,6 @@ layout: layouts/base.njk
 title: Home
 ---
 
-# lauerman.dev
-by Thomas Lauerman
-
 ## About me
 
 ![Image of me](https://lauerman.dev/static/media/headshot.2cb1a5fe.jpg)
