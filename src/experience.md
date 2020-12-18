@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Projects
+title: Experience
 ---
 
-# Projects
+# Experience
