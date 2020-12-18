@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://lauerman.dev",
   "dependencies": {},
-  "scripts": {},
+  "scripts": {
+    "start": "eleventy --serve"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "gh-pages": "^3.1.0"
