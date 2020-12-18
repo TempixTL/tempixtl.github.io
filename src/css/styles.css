@@ -1,53 +1,49 @@
-@font-face {
-  font-family: "Quicksand";
-  src: url(/css/fonts/Quicksand.ttf);
-}
-
-:root {
-  font-family: "Quicksand";
-
-  --bg-color: #282A36;
-  --bg-accent: #44475A;
-  --txt-color: #F8F8F2;
-  --txt-accent: #6272A4;
-
-  --green-accent: #50FA7B;
-  --blue-accent: #8BE9FD;
-  --pink-accent: #FF79C6;
-}
-
 html {
   background: var(--bg-color);
   color: var(--txt-color);
 }
 
-/* Simple CSS inspired by bettermotherfuckingwebsite.com */
-
 body {
-  margin: 40px auto;
-  max-width: 650px;
   line-height: 1.6;
   font-size: 18px;
-  padding: 0 10px;
-}
-
-h1, h2, h3 {
-  line-height: 1.2;
 }
 
 img {
   max-width: 100%;
 }
 
+.content {
+  margin: 40px auto;
+  width: 650px;
+  padding: 0 10px;
+}
+
+.blue-accent {
+  color: var(--blue-accent);
+}
+
+.green-accent {
+  color: var(--green-accent);
+}
+
+.pink-accent {
+  color: var(--pink-accent);
+}
+
 /* Nav styling */
 
 nav {
+  background: var(--bg-accent);
+  height: 60px;
+  padding: 0 40px;
+
   display: flex;
   align-items: center;
 }
 
 nav * {
   margin: 0 10px;
+  text-decoration: none;
 }
 
 nav *:first-child {
