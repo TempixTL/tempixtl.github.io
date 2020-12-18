@@ -14,8 +14,13 @@ img {
 
 .content {
   margin: 40px auto;
-  width: 650px;
   padding: 0 10px;
+}
+
+@media screen and (min-width: 650px) {
+  .content {
+    width: 650px;
+  }
 }
 
 .blue-accent {
