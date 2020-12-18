@@ -5,6 +5,20 @@
 
 :root {
   font-family: "Quicksand";
+
+  --bg-color: #282A36;
+  --bg-accent: #44475A;
+  --txt-color: #F8F8F2;
+  --txt-accent: #6272A4;
+
+  --green-accent: #50FA7B;
+  --blue-accent: #8BE9FD;
+  --pink-accent: #FF79C6;
+}
+
+html {
+  background: var(--bg-color);
+  color: var(--txt-color);
 }
 
 /* Simple CSS inspired by bettermotherfuckingwebsite.com */
@@ -14,9 +28,7 @@ body {
   max-width: 650px;
   line-height: 1.6;
   font-size: 18px;
-  color: #444;
   padding: 0 10px;
-  background: #EEE;
 }
 
 h1, h2, h3 {
