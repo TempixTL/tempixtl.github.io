@@ -2,10 +2,24 @@
 layout: layouts/base.njk
 header:
   title: resume
-  description: break out the boring .pdfs
+  description: break out the .pdfs
   accent_class: pink-accent
 ---
-<h2>check out my LinkedIn profile!</h2>
+<object 
+  data="/dat/resume.pdf"
+  type="application/pdf"
+  width="100%"
+  height="500px">
+</object>
+
+<a href="/dat/resume.pdf" download="thomas-lauerman-resume.pdf">
+  Download my <span class="pink-accent">resume</span> (.pdf)
+</a>
+
+<h2>further reading</h2>
+
+<p>For more detailed information, check out my profile on LinkedIn!</p>
+
 <div
   class="LI-profile-badge"
   data-version="v1"
@@ -27,4 +41,3 @@ header:
   async
   defer>
 </script>
-

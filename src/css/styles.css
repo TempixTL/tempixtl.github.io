@@ -12,6 +12,20 @@ img {
   max-width: 100%;
 }
 
+@media screen and (max-width: 650px) {
+  object[type="application/pdf"] {
+    display: none;
+  }
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: var(--txt-color);
+}
+
+a {
+  font-weight: bold;
+}
+
 small {
   color: var(--txt-accent);
   font-size: 50%;
@@ -29,16 +43,18 @@ small {
 }
 
 .blue-accent {
-  color: var(--blue-accent);
+  color: var(--blue-accent) !important;
 }
 
 .green-accent {
-  color: var(--green-accent);
+  color: var(--green-accent) !important;
 }
 
 .pink-accent {
-  color: var(--pink-accent);
+  color: var(--pink-accent) !important;
 }
+
+/* Chip styling */
 
 .chip-group {
   list-style: none;
