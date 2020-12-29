@@ -90,6 +90,12 @@ nav {
   align-items: center;
 }
 
+@media screen and (max-width: 650px) {
+  nav {
+    padding: 0 6px;
+  }
+}
+
 nav * {
   margin: 0 10px;
   text-decoration: none;
