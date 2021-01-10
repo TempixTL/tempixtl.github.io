@@ -6,7 +6,7 @@ header:
   accent_class: green-accent
 ---
 {% for exp in experience %}
-  <h2>{{ exp.title }} <small></small></h2>
+  <h2>{{ exp.title }}</h2>
   <p>
     {% if exp.company %}
       {{ exp.employment_type }} @ {{ exp.company }}
