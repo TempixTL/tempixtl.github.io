@@ -26,12 +26,14 @@
       <a href="/resume" class="pink-accent">resume</a>
     </nav>
     <div class="content">
-      {% if header %}
-        <h1 class="{{ header.accent_class }}">
-          {{ header.title }} 
-          <small>{{ header.description }}</small>
-        </h1>
-      {% endif %}
+      {% block header %}
+        {% if header %}
+          <h1 class="{{ header.accent_class }}">
+            {{ header.title }} 
+            <small>{{ header.description }}</small>
+          </h1>
+        {% endif %}
+      {% endblock %}
 
       {{ content | safe }}
     </div>
