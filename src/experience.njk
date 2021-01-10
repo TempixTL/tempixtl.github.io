@@ -6,7 +6,25 @@ header:
   accent_class: green-accent
 ---
 {% for exp in experience %}
-  <h2>{{ exp.title }}</h2>
-{% else %}
-  <h2>empty</h2>
+  <h2>{{ exp.title }} <small></small></h2>
+  <p>
+    {% if exp.company %}
+      {{ exp.employment_type }} @ {{ exp.company }}
+    {% else %}
+      {{ exp.employment_type }}
+    {% endif %}
+    <br>
+    {{ exp.start_date }} - {{ exp.end_date }}
+  </p>
+  <p>{{ exp.description }}</p>
+  <ul>
+  {% for resp in exp.responsibilities %}
+    <li>{{ resp }}</li>
+  {% endfor %}
+  </ul>
+  <ul class="chip-group">
+    {% for skl in exp.skills %}
+      <li class="chip">{{ skl }}</li>
+    {% endfor %}
+  </ul>
 {% endfor %}
