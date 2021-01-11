@@ -25,7 +25,7 @@
     ]
   },
   {
-    "title": "Software Engineer Intern",
+    "title": "Google Software Engineer Intern",
     "img": {
       "src": "/img/experience/google-logo.jpg",
       "alt": "Google logo"
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "title": "Mobile Developer Intern",
+    "title": "GaitIQ Mobile Developer Intern",
     "img": {
       "src": "/img/experience/gaitiq-logo.png",
       "alt": "GaitIQ logo"
@@ -120,13 +120,13 @@
     ]
   },
   {
-    "title": "Salesperson",
+    "title": "Cutco Salesperson",
     "img": {
       "src": "/img/experience/cutco-logo.png",
       "alt": "Cutco logo"
     },
     "employment_type": "Full-time",
-    "company": "CUTCO",
+    "company": "Cutco",
     "location": "Plano, TX",
     "start_date": "July 2016",
     "end_date": "February 2017",
