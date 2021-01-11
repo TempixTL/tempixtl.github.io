@@ -24,7 +24,7 @@ header:
     {% if exp.img %}
       <img src="{{ exp.img.src }}" alt="{{ exp.img.alt }}">
     {% endif %}
-    <h2>{{ exp.title }}</h2>
+    <h2><a href="#{{ exp.title | urlencode }}">{{ exp.title }}</a></h2>
   </div>
   <p>
     {% if exp.company %}
