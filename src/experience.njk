@@ -5,8 +5,22 @@ header:
   description: with every new experience I level up
   accent_class: green-accent
 ---
+<p>
+  For a more concise, printer-friendly version, check out the
+  <a class="pink-accent" href="/resume">resume</a> page.
+</p>
+
+<h2>Overview</h2>
+<ul>
 {% for exp in experience %}
-  <div class="img-header">
+  <li>
+    <a href="#{{ exp.title | urlencode }}">{{ exp.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+{% for exp in experience %}
+  <div class="img-header" id="{{ exp.title | urlencode }}">
     {% if exp.img %}
       <img src="{{ exp.img.src }}" alt="{{ exp.img.alt }}">
     {% endif %}
