@@ -54,6 +54,17 @@ small {
   color: var(--pink-accent) !important;
 }
 
+.img-header {
+  display: flex;
+  align-items: center;
+}
+
+.img-header img {
+  height: 4em;
+  margin-right: 10px;
+  border-radius: 0.5em;
+}
+
 /* Chip styling */
 
 .chip-group {
