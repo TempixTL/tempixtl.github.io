@@ -28,4 +28,12 @@ header:
       <li class="chip">{{ skl }}</li>
     {% endfor %}
   </ul>
+  {% if exp.links %}
+    <h3>links</h3>
+    <ul>
+    {% for lnk in exp.links %}
+      <li><a href="{{ lnk.link }}">{{ lnk.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
 {% endfor %}
