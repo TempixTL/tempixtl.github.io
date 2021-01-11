@@ -10,6 +10,7 @@ body {
 
 img {
   max-width: 100%;
+  border-radius: 5pt;
 }
 
 @media screen and (max-width: 650px) {
@@ -62,7 +63,6 @@ small {
 .img-header img {
   height: 4em;
   margin-right: 10px;
-  border-radius: 0.5em;
 }
 
 /* Chip styling */
