@@ -16,7 +16,22 @@ body {
 
 img {
   max-width: 100%;
-  border-radius: 5pt;
+  border-radius: 5px;
+}
+
+figure {
+  background-color: var(--bg-accent);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+figure img {
+  border-radius: 0;
+}
+
+figcaption {
+  height: 2em;
+  text-align: center;
 }
 
 @media screen and (max-width: 650px) {
