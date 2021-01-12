@@ -24,6 +24,7 @@ figure {
   background-color: var(--bg-accent);
   border-radius: 15px;
   overflow: hidden;
+  margin: 0;
 }
 
 figure img {
@@ -31,7 +32,7 @@ figure img {
 }
 
 figcaption {
-  height: 2em;
+  line-height: 3;
   text-align: center;
 }
 
