@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://lauerman.dev",
-  "dependencies": {
-    "js-yaml": "^4.0.0"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "js-yaml": "^4.0.0",
+    "normalize.css": "^8.0.1",
+    "vanilla-tilt": "^1.7.0"
   },
   "license": "MIT"
 }
