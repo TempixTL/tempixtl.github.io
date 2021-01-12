@@ -10,6 +10,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "node_modules/vanilla-tilt/dist/vanilla-tilt.js": "js/vanilla-tilt.js"
   });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/typeface-quicksand/index.css": "css/quicksand.css"
+  });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/typeface-quicksand/files/*": "css/files"
+  });
 
   eleventyConfig.addPassthroughCopy("src/css"); // css styles
   eleventyConfig.addPassthroughCopy("src/img"); // images
