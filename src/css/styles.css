@@ -1,6 +1,12 @@
 html {
   background: var(--bg-color);
   color: var(--txt-color);
+
+  background-image: url("/img/logo-bg.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 body {
