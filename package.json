@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://lauerman.dev",
-  "dependencies": {},
+  "dependencies": {
+    "js-yaml": "^4.0.0"
+  },
   "scripts": {
     "start": "eleventy --serve"
   },
