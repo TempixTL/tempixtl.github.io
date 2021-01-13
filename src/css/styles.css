@@ -92,6 +92,15 @@ small {
   margin-right: 10px;
 }
 
+.action-btn {
+  text-decoration: none;
+  background-color: var(--bg-accent);
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: auto;
+}
+
 /* Chip styling */
 
 .chip-group {
