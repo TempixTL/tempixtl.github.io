@@ -1,4 +1,5 @@
 const { src, dest, series, parallel } = require("gulp");
+const gutil = require("gulp-util");
 const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const postcss = require("gulp-postcss");
@@ -19,10 +20,10 @@ function css_postcss() {
   ];
 
   return src(stylesheets)
-    .pipe(sourcemaps.init())
+    .pipe(gutil.env.production ? gutil.noop() : sourcemaps.init())
       .pipe(concat("styles.min.css"))
       .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(sourcemaps.write("."))
+    .pipe(gutil.env.production ? gutil.noop() : sourcemaps.write("."))
     .pipe(dest("dist/css/"));
 }
 
