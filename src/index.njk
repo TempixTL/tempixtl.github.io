@@ -41,4 +41,49 @@ However, my drive remains the same: expressing my creativity, delighting users,
 and making people’s lives easier.
 </p>
 
-<a href="/about_me">read more</a>
+<p>
+  <a href="/about_me">read more <span class="blue-accent">about me</span></a>
+</p>
+
+<h1 class="green-accent">experience</h1>
+<div class="exp-grid">
+  {% for exp in experience %}
+    {% if loop.index <= 4 %}
+      <article>
+        <div class="img-header">
+          {% if exp.img %}
+            <img src="{{ exp.img.src }}" alt="{{ exp.img.alt }}">
+          {% endif %}
+          <h3><a href="/experience/#{{ exp.title | urlencode }}">{{ exp.title }}</a></h3>
+          </div>
+          <p>
+            {% if exp.company %}
+              {{ exp.employment_type }} @ {{ exp.company }}
+            {% else %}
+              {{ exp.employment_type }}
+            {% endif %}
+            <br>
+            {{ exp.start_date }} - {{ exp.end_date }}
+          </p>
+          <div>
+            <p style="margin: 0; font-weight: bold">
+              skills:
+            </p>
+            <ul class="chip-group">
+              {% for skl in exp.skills %}
+                <li class="chip-light">{{ skl }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<p style="text-align: center">
+  ...and {{ experience.length - 4 }} more!
+</p>
+
+<p>
+  <a href="/experience">read more <span class="green-accent">experience</span></a>
+</p>
