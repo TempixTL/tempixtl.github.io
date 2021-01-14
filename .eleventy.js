@@ -17,7 +17,6 @@ module.exports = function(eleventyConfig) {
     "node_modules/typeface-quicksand/files/*": "css/files"
   });
 
-  eleventyConfig.addPassthroughCopy("src/css"); // css styles
   eleventyConfig.addPassthroughCopy("src/img"); // images
   eleventyConfig.addPassthroughCopy("src/js");  // js files
   eleventyConfig.addPassthroughCopy("src/dat"); // other data
