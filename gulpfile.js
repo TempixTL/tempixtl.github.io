@@ -11,6 +11,7 @@ const cssnano = require("cssnano");
 function clean() {
   return del([
     "./dist/css/**/*",
+    "./dist/js/**/*",
   ]);
 }
 
@@ -35,10 +36,24 @@ function css_postcss() {
     .pipe(dest("dist/css/"));
 }
 
+function js() {
+  const scripts = [
+    "./node_modules/vanilla-tilt/dist/vanilla-tilt.min.js",
+    "./src/js/**/*.js",
+  ];
+
+  return src(scripts)
+    .pipe(dest("dist/js/"));
+}
+
 exports.clean = clean;
 exports.css = parallel(css_fonts, css_postcss);
+exports.js = js;
 exports.build = series(
   exports.clean,
-  exports.css,
+  parallel(
+    exports.css,
+    exports.js,
+  ),
 );
 exports.default = exports.build;
