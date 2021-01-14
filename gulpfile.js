@@ -35,4 +35,10 @@ function css_postcss() {
     .pipe(dest("dist/css/"));
 }
 
-exports.default = parallel(css_fonts, css_postcss);
+exports.clean = clean;
+exports.css = parallel(css_fonts, css_postcss);
+exports.build = series(
+  exports.clean,
+  exports.css,
+);
+exports.default = exports.build;
