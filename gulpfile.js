@@ -60,13 +60,12 @@ function img() {
   return src("./src/img/**/*")
     .pipe(responsive({
       "experience/*": {
-        width: 72,
-        height: 72,
-        crop: true,
+        width: 72*2,
       },
     }, {
       errorOnUnusedImage: false,
       passThroughUnused: true,
+      silent: true,
     }))
     .pipe(image(imageConfig))
     .pipe(dest("./dist/img/"));
