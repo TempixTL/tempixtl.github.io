@@ -5,19 +5,18 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 
-function copyFonts() {
+function css_fonts() {
   return src("./node_modules/typeface-quicksand/files/**/*")
     .pipe(dest("dist/css/files/"));
 }
 
-function css() {
+function css_postcss() {
   const stylesheets = [
     "./node_modules/normalize.css/normalize.css",
     "./node_modules/typeface-quicksand/index.css",
     "./src/css/base.css",
     "./src/css/styles.css"
   ];
-
 
   return src(stylesheets)
     .pipe(sourcemaps.init())
@@ -27,4 +26,4 @@ function css() {
     .pipe(dest("dist/css/"));
 }
 
-exports.default = parallel(copyFonts, css);
+exports.default = parallel(css_fonts, css_postcss);
