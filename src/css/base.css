@@ -1,9 +1,5 @@
-@font-face {
-  font-family: "Quicksand";
-}
-
 :root {
-  font-family: "Quicksand";
+  font-family: "Quicksand", Helvetica, Arial;
 
   --bg-color: #282A36;
   --bg-accent: #44475A;
