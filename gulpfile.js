@@ -1,4 +1,5 @@
 const { src, dest, series, parallel } = require("gulp");
+// util
 const gutil = require("gulp-util");
 const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
@@ -7,11 +8,14 @@ const concat = require("gulp-concat");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+// img
+const image = require("gulp-image");
 
 function clean() {
   return del([
     "./dist/css/**/*",
     "./dist/js/**/*",
+    "./dist/img/**/*",
   ]);
 }
 
@@ -46,14 +50,27 @@ function js() {
     .pipe(dest("dist/js/"));
 }
 
+function img() {
+  const imageConfig = {
+    svgo: false,
+    quiet: false,
+  };
+
+  return src("./src/img/**/*")
+    .pipe(image(imageConfig))
+    .pipe(dest("./dist/img/"));
+}
+
 exports.clean = clean;
 exports.css = parallel(css_fonts, css_postcss);
 exports.js = js;
+exports.img = img;
 exports.build = series(
   exports.clean,
   parallel(
     exports.css,
     exports.js,
+    exports.img,
   ),
 );
 exports.default = exports.build;
