@@ -9,6 +9,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 // img
+const responsive = require("gulp-responsive");
 const image = require("gulp-image");
 
 function clean() {
@@ -57,6 +58,16 @@ function img() {
   };
 
   return src("./src/img/**/*")
+    .pipe(responsive({
+      "experience/*": {
+        width: 72,
+        height: 72,
+        crop: true,
+      },
+    }, {
+      errorOnUnusedImage: false,
+      passThroughUnused: true,
+    }))
     .pipe(image(imageConfig))
     .pipe(dest("./dist/img/"));
 }
