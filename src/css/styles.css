@@ -111,8 +111,7 @@ small {
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 1em;
 }
 
 .exp-grid article {
