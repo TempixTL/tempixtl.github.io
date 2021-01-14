@@ -91,7 +91,7 @@ small {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 10px;
+  grid-gap: 1em;
 }
 
 .action-btn {
