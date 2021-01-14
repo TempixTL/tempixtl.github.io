@@ -24,7 +24,7 @@ function css_postcss() {
     "./node_modules/normalize.css/normalize.css",
     "./node_modules/typeface-quicksand/index.css",
     "./src/css/base.css",
-    "./src/css/styles.css"
+    "./src/css/styles.css",
   ];
 
   return src(stylesheets)
