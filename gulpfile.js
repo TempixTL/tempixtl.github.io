@@ -17,6 +17,7 @@ function clean() {
     "./dist/css/**/*",
     "./dist/js/**/*",
     "./dist/img/**/*",
+    "./dist/dat/**/*",
   ]);
 }
 
@@ -70,16 +71,23 @@ function img() {
     .pipe(dest("./dist/img/"));
 }
 
+function dat() {
+  return src("./src/dat/**/*")
+    .pipe(dest("./dist/dat/"));
+}
+
 exports.clean = clean;
 exports.css = parallel(css_fonts, css_postcss);
 exports.js = js;
 exports.img = img;
+exports.dat = dat;
 exports.build = series(
   exports.clean,
   parallel(
     exports.css,
     exports.js,
     exports.img,
+    exports.dat,
   ),
 );
 exports.default = exports.build;
