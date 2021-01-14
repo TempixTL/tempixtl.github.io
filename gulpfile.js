@@ -1,11 +1,18 @@
 const { src, dest, series, parallel } = require("gulp");
 const gutil = require("gulp-util");
 const sourcemaps = require("gulp-sourcemaps");
+const del = require("del");
 const concat = require("gulp-concat");
 // css
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+
+function clean() {
+  return del([
+    "./dist/css/**/*",
+  ]);
+}
 
 function css_fonts() {
   return src("./node_modules/typeface-quicksand/files/**/*")
