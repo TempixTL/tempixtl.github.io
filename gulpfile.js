@@ -54,7 +54,6 @@ function js() {
 function img() {
   const imageConfig = {
     svgo: false,
-    quiet: false,
   };
 
   return src("./src/img/**/*")
