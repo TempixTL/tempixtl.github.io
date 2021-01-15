@@ -12,13 +12,27 @@ const cssnano = require("cssnano");
 const responsive = require("gulp-responsive");
 const image = require("gulp-image");
 
+const stylesheets = [
+  "./node_modules/normalize.css/normalize.css",
+  "./node_modules/typeface-quicksand/index.css",
+  "./src/css/base.css",
+  "./src/css/styles.css",
+];
+
+const scripts = [
+  "./node_modules/vanilla-tilt/dist/vanilla-tilt.min.js",
+  "./src/js/**/*.js",
+];
+
+const cleanDirs = [
+  "./dist/css/**/*",
+  "./dist/js/**/*",
+  "./dist/img/**/*",
+  "./dist/dat/**/*",
+];
+
 function clean() {
-  return del([
-    "./dist/css/**/*",
-    "./dist/js/**/*",
-    "./dist/img/**/*",
-    "./dist/dat/**/*",
-  ]);
+  return del(cleanDirs);
 }
 
 function css_fonts() {
@@ -27,13 +41,6 @@ function css_fonts() {
 }
 
 function css_postcss() {
-  const stylesheets = [
-    "./node_modules/normalize.css/normalize.css",
-    "./node_modules/typeface-quicksand/index.css",
-    "./src/css/base.css",
-    "./src/css/styles.css",
-  ];
-
   return src(stylesheets)
     .pipe(gutil.env.production ? gutil.noop() : sourcemaps.init())
       .pipe(concat("styles.min.css"))
@@ -43,11 +50,6 @@ function css_postcss() {
 }
 
 function js() {
-  const scripts = [
-    "./node_modules/vanilla-tilt/dist/vanilla-tilt.min.js",
-    "./src/js/**/*.js",
-  ];
-
   return src(scripts)
     .pipe(dest("dist/js/"));
 }
