@@ -9,7 +9,7 @@
     "vanilla-tilt": "^1.7.0"
   },
   "scripts": {
-    "clean": "rm -r dist/",
+    "clean": "rimraf dist/",
     "prebuild-dev": "npm run clean",
     "build-dev": "eleventy && gulp build",
     "build": "NODE_ENV='production' npm run build-dev",
@@ -32,7 +32,8 @@
     "gulp-responsive": "^3.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "js-yaml": "^4.0.0",
-    "postcss": "^8.2.4"
+    "postcss": "^8.2.4",
+    "rimraf": "^3.0.2"
   },
   "license": "MIT"
 }
