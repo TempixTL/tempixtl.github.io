@@ -1,4 +1,4 @@
-const { src, dest, series, parallel } = require("gulp");
+const { src, dest, series, parallel, watch } = require("gulp");
 // util
 const gutil = require("gulp-util");
 const sourcemaps = require("gulp-sourcemaps");
@@ -79,11 +79,19 @@ function dat() {
     .pipe(dest("./dist/dat/"));
 }
 
+function watch_task() {
+  watch("./src/css/**/*", css_postcss);
+  watch("./src/js/**/*", js);
+  watch("./src/img/**/*", img);
+  watch("./src/dat/**/*", dat);
+}
+
 exports.clean = clean;
 exports.css = parallel(css_fonts, css_postcss);
 exports.js = js;
 exports.img = img;
 exports.dat = dat;
+exports.watch = watch_task;
 exports.build = parallel(
   exports.css,
   exports.js,
