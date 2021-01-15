@@ -2,7 +2,6 @@ const { src, dest, series, parallel, watch } = require("gulp");
 // util
 const cached = require("gulp-cached");
 const sourcemaps = require("gulp-sourcemaps");
-const del = require("del");
 const concat = require("gulp-concat");
 const gulpif = require("gulp-if");
 // css
@@ -25,19 +24,8 @@ const scripts = [
   "./src/js/**/*.js",
 ];
 
-const cleanDirs = [
-  "./dist/css/**/*",
-  "./dist/js/**/*",
-  "./dist/img/**/*",
-  "./dist/dat/**/*",
-];
-
 const prod_env = process.env.NODE_ENV === "production";
 const dev_env = process.env.NODE_ENV === "development" || !prod_env;
-
-function clean() {
-  return del(cleanDirs);
-}
 
 function css_fonts() {
   return src("./node_modules/typeface-quicksand/files/**/*")
@@ -91,7 +79,6 @@ function watch_task() {
   watch("./src/dat/**/*", dat);
 }
 
-exports.clean = clean;
 exports.css = parallel(css_fonts, css_postcss);
 exports.js = js;
 exports.img = img;
