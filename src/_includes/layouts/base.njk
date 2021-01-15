@@ -23,16 +23,13 @@
       <a href="/experience" class="green-accent">experience</a>
       <a href="/resume" class="pink-accent">resume</a>
     </nav>
+    {% if header %}
+      <h1 class="header {{ header.accent_class }}">
+        {{ header.title }} 
+        <small>{{ header.description }}</small>
+      </h1>
+    {% endif %}
     <div class="content">
-      {% block header %}
-        {% if header %}
-          <h1 class="{{ header.accent_class }}">
-            {{ header.title }} 
-            <small>{{ header.description }}</small>
-          </h1>
-        {% endif %}
-      {% endblock %}
-
       {{ content | safe }}
     </div>
     <script type="text/javascript" src="/js/vanilla-tilt.min.js"></script>
