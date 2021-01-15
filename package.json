@@ -5,7 +5,16 @@
   "homepage": "https://lauerman.dev",
   "dependencies": {},
   "scripts": {
-    "start": "eleventy --config=eleventy.js --serve"
+    "start": "eleventy --config=eleventy.js --serve",
+    "clean": "rm -r dist/",
+
+    "prebuild-dev": "npm run clean",
+    "build-dev": "eleventy --config=eleventy.js && gulp build",
+
+    "build": "NODE_ENV='production' npm run build-dev",
+
+    "predeploy": "npm run build",
+    "deploy": "echo TODO: gh-pages"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
