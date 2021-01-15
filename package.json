@@ -19,7 +19,6 @@
     "cssnano": "^4.1.10",
     "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
-    "gulp-cached": "^1.1.1",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^3.0.0",

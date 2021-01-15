@@ -1,6 +1,5 @@
 const { src, dest, series, parallel, watch } = require("gulp");
 // util
-const cached = require("gulp-cached");
 const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const gulpif = require("gulp-if");
@@ -34,7 +33,6 @@ function css_fonts() {
 
 function css_postcss() {
   return src(stylesheets)
-    .pipe(cached("css_postcss"))
     .pipe(gulpif(dev_env, sourcemaps.init()))
       .pipe(concat("styles.min.css"))
       .pipe(postcss([autoprefixer(), cssnano()]))
