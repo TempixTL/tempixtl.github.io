@@ -56,17 +56,18 @@ function img() {
   const imageConfig = {
     svgo: false,
   };
+  const responsiveConfig = {
+    errorOnUnusedImage: false,
+    passThroughUnused: true,
+    silent: true,
+  };
 
   return src("./src/img/**/*")
     .pipe(responsive({
       "experience/*": {
         width: 72*2,
       },
-    }, {
-      errorOnUnusedImage: false,
-      passThroughUnused: true,
-      silent: true,
-    }))
+    }, responsiveConfig))
     .pipe(image(imageConfig))
     .pipe(dest("./dist/img/"));
 }
