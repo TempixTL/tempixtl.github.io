@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://lauerman.dev",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-cached": "^1.1.1"
+  },
   "scripts": {
     "start": "eleventy --config=eleventy.js --serve"
   },
