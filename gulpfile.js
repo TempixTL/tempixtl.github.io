@@ -4,6 +4,7 @@ const cached = require("gulp-cached");
 const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
 const concat = require("gulp-concat");
+const gulpif = require("gulp-if");
 // css
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -31,6 +32,9 @@ const cleanDirs = [
   "./dist/dat/**/*",
 ];
 
+const prod_env = process.env.NODE_ENV === "production";
+const dev_env = process.env.NODE_ENV === "development" || !prod_env;
+
 function clean() {
   return del(cleanDirs);
 }
@@ -43,10 +47,10 @@ function css_fonts() {
 function css_postcss() {
   return src(stylesheets)
     .pipe(cached("css_postcss"))
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(dev_env, sourcemaps.init()))
       .pipe(concat("styles.min.css"))
       .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(sourcemaps.write("."))
+    .pipe(gulpif(dev_env, sourcemaps.write(".")))
     .pipe(dest("dist/css/"));
 }
 
