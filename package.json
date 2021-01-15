@@ -10,11 +10,13 @@
     "build-dev": "eleventy && gulp build",
     "build": "NODE_ENV='production' npm run build-dev",
     "predeploy": "npm run build",
-    "deploy": "echo TODO: gh-pages"
+    "deploy": "echo TODO: gh-pages",
+    "serve": "concurrently -n 11ty,gulp \"eleventy --serve\" \"gulp watch\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "autoprefixer": "^10.2.1",
+    "concurrently": "^5.3.0",
     "cssnano": "^4.1.10",
     "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
