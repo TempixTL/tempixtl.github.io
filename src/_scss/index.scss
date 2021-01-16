@@ -199,28 +199,17 @@ small {
 
 nav {
   background: $bg-accent;
-  height: 60px;
   padding: 0 40px;
 
   display: flex;
   align-items: center;
-}
-
-@media screen and (max-width: 650px) {
-  nav {
-    padding: 0 6px;
+  
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
   }
-}
 
-nav * {
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-nav *:first-child {
-  margin-left: 0;
-}
-
-nav *:last-child {
-  margin-right: 0;
+  > * {
+    margin: 10px;
+    text-decoration: none;
+  }
 }
