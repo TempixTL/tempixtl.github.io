@@ -14,7 +14,7 @@
     "build-dev": "eleventy && gulp build",
     "build": "NODE_ENV='production' npm run build-dev",
     "predeploy": "npm run build",
-    "deploy": "echo TODO: gh-pages",
+    "deploy": "gh-pages -d dist -b dist",
     "serve": "concurrently -n 11ty,gulp \"eleventy --serve\" \"gulp watch\"",
     "start": "npm run serve"
   },
