@@ -1,22 +1,40 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/@fontsource/quicksand/index";
 
+// Dracula colors
+// from https://draculatheme.com/contribute
+
+$drac-background: #282a36;
+$drac-current-line: #44475a;
+$drac-foreground: #f8f8f2;
+$drac-comment: #6272a4;
+$drac-cyan: #8be9fd;
+$drac-green: #50fa7b;
+$drac-orange: #ffb86c;
+$drac-pink: #ff79c6;
+$drac-purple: #bd93f9;
+$drac-red: #ff5555;
+$drac-yellow: #f1fa8c;
+
+$bg-color: $drac-background;
+$bg-accent: $drac-current-line;
+$txt-color: $drac-foreground;
+$txt-accent: $drac-comment;
+$cyan: $drac-cyan;
+$green: $drac-green;
+$orange: $drac-orange;
+$pink: $drac-pink;
+$purple: $drac-purple;
+$red: $drac-red;
+$yellow: $drac-yellow;
+
 :root {
   font-family: "Quicksand", Helvetica, Arial;
-
-  --bg-color: #282A36;
-  --bg-accent: #44475A;
-  --txt-color: #F8F8F2;
-  --txt-accent: #6272A4;
-
-  --green-accent: #50FA7B;
-  --blue-accent: #8BE9FD;
-  --pink-accent: #FF79C6;
 }
 
 html {
-  background: var(--bg-color);
-  color: var(--txt-color);
+  background: $bg-color;
+  color: $txt-color;
 
   background-image: url("/img/logo-bg.svg");
   background-attachment: fixed;
@@ -48,7 +66,7 @@ img {
 }
 
 figure {
-  background-color: var(--bg-accent);
+  background-color: $bg-accent;
   border-radius: 15px;
   overflow: hidden;
   margin: 0;
@@ -70,7 +88,7 @@ figcaption {
 }
 
 a:link, a:visited, a:hover, a:active {
-  color: var(--txt-color);
+  color: $txt-color;
 }
 
 a {
@@ -78,7 +96,7 @@ a {
 }
 
 small {
-  color: var(--txt-accent);
+  color: $txt-accent;
   font-size: 50%;
 }
 
@@ -88,16 +106,16 @@ small {
   max-width: 650px;
 }
 
-.blue-accent {
-  color: var(--blue-accent) !important;
+.cyan-accent {
+  color: $cyan !important;
 }
 
 .green-accent {
-  color: var(--green-accent) !important;
+  color: $green !important;
 }
 
 .pink-accent {
-  color: var(--pink-accent) !important;
+  color: $pink !important;
 }
 
 .img-header {
@@ -119,7 +137,7 @@ small {
 
 .action-btn {
   text-decoration: none;
-  background-color: var(--bg-accent);
+  background-color: $bg-accent;
   padding: 20px;
   border-radius: 20px;
   display: inline-block;
@@ -134,7 +152,7 @@ small {
 }
 
 .exp-grid article {
-  background: var(--bg-accent);
+  background: $bg-accent;
   border-radius: 20px;
   padding: 20px;
 
@@ -170,17 +188,17 @@ small {
 
 .chip {
   border: none;
-  background-color: var(--bg-accent);
+  background-color: $bg-accent;
 }
 
 .chip-light {
-  border: 1px solid var(--txt-color);
+  border: 1px solid $txt-color;
 }
 
 /* Nav styling */
 
 nav {
-  background: var(--bg-accent);
+  background: $bg-accent;
   height: 60px;
   padding: 0 40px;
 
