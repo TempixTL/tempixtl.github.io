@@ -48,13 +48,6 @@ body {
   font-size: 18px;
 }
 
-.header {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-}
-
 h1 {
   line-height: 1;
 }
@@ -70,15 +63,15 @@ figure {
   border-radius: 15px;
   overflow: hidden;
   margin: 0;
-}
 
-figure img {
-  border-radius: 0;
-}
+  img {
+    border-radius: 0;
+  }
 
-figcaption {
-  line-height: 3;
-  text-align: center;
+  figcaption {
+    line-height: 3;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -87,12 +80,12 @@ figcaption {
   }
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: $txt-color;
-}
-
 a {
   font-weight: bold;
+
+  &:link, &:visited, &:hover, &:active {
+    color: $txt-color;
+  }
 }
 
 small {
@@ -104,6 +97,13 @@ small {
   margin: 40px auto;
   padding: 0 10px;
   max-width: 650px;
+}
+
+.header {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
 }
 
 .cyan-accent {
@@ -121,11 +121,11 @@ small {
 .img-header {
   display: flex;
   align-items: center;
-}
 
-.img-header img {
-  height: 4em;
-  margin-right: 10px;
+  img {
+    height: 4em;
+    margin-right: 10px;
+  }
 }
 
 .hero {
@@ -149,26 +149,20 @@ small {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1em;
-}
 
-.exp-grid article {
-  background: $bg-accent;
-  border-radius: 20px;
-  padding: 20px;
+  article {
+    background: $bg-accent;
+    border-radius: 20px;
+    padding: 20px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.exp-grid h1,
-.exp-grid h2,
-.exp-grid h3,
-.exp-grid h4,
-.exp-grid h5,
-.exp-grid h6,
-.exp-grid ul {
-  margin: 0;
+  h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+  }
 }
 
 /* Chip styling */
