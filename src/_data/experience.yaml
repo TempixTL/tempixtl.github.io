@@ -1,0 +1,106 @@
+- title: ACM Head Tutor
+  img:
+    src: "/img/experience/trinity-logo.jpg"
+    alt: Trinity University logo
+  employment_type: Part-time
+  company: Trinity University
+  location: San Antonio, TX
+  start_date: January 2019
+  end_date: Present
+  responsibilities:
+    - Mentor freshman and sophomore students in foundational Computer Science concepts
+    - Assist tutees in planning, coding, and debugging multifaceted software projects
+    - Act as Head Tutor (since January 2020), including hiring and training new tutors
+  skills:
+    - scala
+    - c
+    - c++
+    - communication
+    - problem solving
+- title: Google Software Engineer Intern
+  img:
+    src: "/img/experience/google-logo.jpg"
+    alt: Google logo
+  employment_type: Internship
+  company: Google
+  location: Frisco, TX (Remote)
+  start_date: May 2020
+  end_date: August 2020
+  responsibilities:
+    - Adapting to an unfamiliar tech stack quickly after project change due to pandemic
+    - Creating a Tensorflow model to predict wether a dish is high or low calorie based
+      on it's name
+    - Taking initiative to create practical application of the ML model within original
+      timeframe
+  skills:
+    - python
+    - tensorflow
+    - pandas
+    - javascript
+    - chrome extension
+  links:
+    - title: Amaranth GitHub Repo
+      link: https://github.com/googleinterns/amaranth
+- title: GaitIQ Mobile Developer Intern
+  img:
+    src: "/img/experience/gaitiq-logo.png"
+    alt: GaitIQ logo
+  employment_type: Internship
+  company: GaitIQ
+  location: San Antonio, TX
+  start_date: May 2019
+  end_date: July 2019
+  responsibilities:
+    - Employed Agile methodology to efficiently communicate with co-workers
+    - Designed a cross-platform, multi-screen tablet application UI in Sketch
+    - Transformed design into a fully-functioning React Native application to demo for
+      investors
+  skills:
+    - react
+    - javascript
+    - sketch
+    - react native
+    - typescript
+  links:
+    - title: GaitIQ Website
+      link: https://gaitiq.com
+    - title: Trinity's Instagram Post
+      link: https://www.instagram.com/p/BzeWO14l8F1
+- title: 'Palette: colorful puzzles'
+  img:
+    src: "/img/experience/palette-icon.png"
+    alt: Palette icon
+  employment_type: Personal project
+  location: Frisco, TX
+  start_date: June 2017
+  end_date: August 2018
+  responsibilities:
+    - Developed a 2D, touch-based puzzle game application for iOS written in Swift
+    - Designed, programmed, and uploaded to the App Store independently
+    - Researched common app architecture and optimization practices to ensure scalability
+  skills:
+    - swift
+    - iOS
+    - UIKit
+    - SpriteKit
+  links:
+    - title: Palette on the App Store
+      link: https://apps.apple.com/us/app/palette-colorful-puzzles/id1403062573
+- title: Cutco Salesperson
+  img:
+    src: "/img/experience/cutco-logo.png"
+    alt: Cutco logo
+  employment_type: Full-time
+  company: Cutco
+  location: Plano, TX
+  start_date: July 2016
+  end_date: February 2017
+  responsibilities:
+    - Identified clients, set appointments, and made sales
+    - Recorded over $6,000 of product sales in one 3-month period
+    - Acquired professional experience with patience, communication, and presenation
+      skills
+  skills:
+    - patience
+    - communication
+    - presentation skills

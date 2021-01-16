@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title or header.title %}
+      <title>lauerman.dev | {{ title or header.title }}</title>
+    {% else %}
+      <title>lauerman.dev</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="/css/index.css"/>
+  </head>
+
+  <body>
+    {% include "nav.njk" %}
+    {% if header %}
+      <h1 class="header {{ header.accent_class }}">
+        {{ header.title }} 
+        <small>{{ header.description }}</small>
+      </h1>
+    {% endif %}
+    <div class="content">
+      {{ content | safe }}
+    </div>
+    <script type="text/javascript" src="/js/vanilla-tilt.min.js"></script>
+  </body>
+</html>
