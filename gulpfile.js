@@ -1,22 +1,15 @@
 const { src, dest, series, parallel, watch } = require("gulp");
 // util
 const sourcemaps = require("gulp-sourcemaps");
-const concat = require("gulp-concat");
 const gulpif = require("gulp-if");
 // css
+const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 // img
 const responsive = require("gulp-responsive");
 const image = require("gulp-image");
-
-const stylesheets = [
-  "./node_modules/normalize.css/normalize.css",
-  "./node_modules/typeface-quicksand/index.css",
-  "./src/css/base.css",
-  "./src/css/styles.css",
-];
 
 const scripts = [
   "./node_modules/vanilla-tilt/dist/vanilla-tilt.min.js",
@@ -27,17 +20,23 @@ const prod_env = process.env.NODE_ENV === "production";
 const dev_env = process.env.NODE_ENV === "development" || !prod_env;
 
 function css_fonts() {
-  return src("./node_modules/typeface-quicksand/files/**/*")
+  return src("./node_modules/@fontsource/quicksand/files/**/*")
     .pipe(dest("dist/css/files/"));
 }
 
 function css_postcss() {
-  return src(stylesheets)
+  const sassConfig = {
+    includePaths: [
+      "./node_modules/",
+    ],
+  };
+
+  return src("./src/_scss/index.scss")
     .pipe(gulpif(dev_env, sourcemaps.init()))
-      .pipe(concat("styles.min.css"))
+      .pipe(sass(sassConfig))
       .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulpif(dev_env, sourcemaps.write(".")))
-    .pipe(dest("dist/css/"));
+    .pipe(dest("./dist/css/"));
 }
 
 function js() {
@@ -71,7 +70,7 @@ function dat() {
 }
 
 function watch_task() {
-  watch("./src/css/**/*", css_postcss);
+  watch("./src/_scss/**/*", css_postcss);
   watch("./src/js/**/*", js);
   watch("./src/img/**/*", img);
   watch("./src/dat/**/*", dat);

@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
   // gulp-managed dependencies
-  eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("./src/_scss/");
   eleventyConfig.addWatchTarget("./src/js/");
   eleventyConfig.addWatchTarget("./src/img/");
   eleventyConfig.addWatchTarget("./src/dat/");

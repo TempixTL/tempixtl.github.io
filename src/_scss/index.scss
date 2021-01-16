@@ -1,3 +1,19 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/@fontsource/quicksand/index";
+
+:root {
+  font-family: "Quicksand", Helvetica, Arial;
+
+  --bg-color: #282A36;
+  --bg-accent: #44475A;
+  --txt-color: #F8F8F2;
+  --txt-accent: #6272A4;
+
+  --green-accent: #50FA7B;
+  --blue-accent: #8BE9FD;
+  --pink-accent: #FF79C6;
+}
+
 html {
   background: var(--bg-color);
   color: var(--txt-color);
