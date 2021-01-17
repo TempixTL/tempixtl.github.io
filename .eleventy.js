@@ -1,6 +1,21 @@
+const htmlmin = require("html-minifier");
 const yaml = require("js-yaml");
 
+const htmlminConfig = {
+  useShortDoctype: true,
+  removeComments: true,
+  collapseWhitespace: true,
+};
+
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if (outputPath.endsWith(".html")) {
+      const minified = htmlmin.minify(content, htmlminConfig);
+      return minified;
+    } else {
+      return content;
+    }
+  })
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
   // gulp-managed dependencies
