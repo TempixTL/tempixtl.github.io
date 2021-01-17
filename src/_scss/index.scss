@@ -175,14 +175,14 @@ footer {
 .chip-group {
   list-style: none;
   padding: 0;
-  line-height: 2.5;
 }
 
 .chip, .chip-light {
   white-space: nowrap;
   padding: 6px 12px;
+  margin: 1px;
   border-radius: 24px;
-  display: inline;
+  display: inline-block;
 }
 
 .chip {
